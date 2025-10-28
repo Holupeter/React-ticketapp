@@ -1,0 +1,321 @@
+/* === Base Reset / Typography === */
+* { box-sizing: border-box; } /* Every element uses border-box sizing for predictable layout */
+html, body, #root { height: 100%; margin: 0; } /* Full height app, remove default margins */
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #111; }
+
+/* === Layout Container Rule (max-width 1440px, centered) === */
+.container {
+  max-width: 1440px;         /* Requirement: identical 1440px max width across frameworks */
+  margin: 0 auto;            /* Center horizontally on large screens */
+  padding: 0 16px;           /* Comfortable side padding on small screens */
+}
+
+.welcome {
+  text-align: center;
+  font-size: 18px;
+  color: #374151;
+  margin-top: -12px;
+  margin-bottom: 32px;
+}
+
+/* === Accessible Focus === */
+:focus-visible {
+  outline: 3px solid #2563eb; /* Visible focus ring for keyboard users */
+  outline-offset: 2px;
+}
+
+/* === Hero Section with wave background + circle === */
+.hero {
+  position: relative;          /* So circles can overlap */
+  padding: 80px 0 140px;       /* Space above + room for wave at bottom */
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%); /* Soft gradient backdrop */
+  overflow: hidden;            /* Hide overflowing shapes */
+}
+.hero--compact {                           /* smaller for Tickets/Dashboard */
+  padding: 48px 0 100px;
+}
+.hero__content {
+  text-align: center;
+}
+.hero__title {
+  font-size: clamp(28px, 4vw, 48px);   /* Responsive title */
+  margin: 0 0 12px;
+}
+.hero__subtitle {
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: #374151;
+  margin: 0 0 24px;
+}
+.hero__cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, transform .06s ease;
+}
+.btn:hover {
+  background: #f3f4f6;             /* subtle hover */
+}
+.btn:active {
+  transform: translateY(1px);       /* click press feedback */
+}
+.btn--primary {
+  background: #111827;
+  color: #ffffff;
+  border-color: #111827;
+}
+.btn--primary:hover {
+  background: #0b1220;              /* darker on hover */
+  border-color: #0b1220;
+}
+.btn--secondary {
+  background: #ffffff;
+  color: #111827;
+  border-color: #d1d5db;
+}
+.btn--secondary:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+.btn--danger {
+  background: #fee2e2;
+  color: #7f1d1d;
+  border-color: #fecaca;
+}
+.btn--danger:hover {
+  background: #fecaca;
+  border-color: #fca5a5;
+}
+.btn:focus-visible { outline-color: #111827; }
+
+/* Decorative circle overlapping hero */
+.hero__circle {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  right: 8%;
+  top: 8%;
+  background: radial-gradient(circle at 30% 30%, #c7d2fe, #93c5fd);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Wave at bottom of hero */
+.hero__wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  width: 100%;
+}
+
+/* Second decorative circle (site-wide requirement: at least two circles) */
+.circle--floating {
+  position: absolute; width: 120px; height: 120px; border-radius: 50%;
+  left: 6%; bottom: -40px;
+  background: radial-gradient(circle at 70% 40%, #fde68a, #fca5a5);
+  opacity: 0.5; pointer-events: none;
+}
+
+/* === Cards (stats / tickets / features) === */
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+}
+.grid {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* === Status colors === */
+.tag {
+  display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600;
+}
+.tag--open { background: #dcfce7; color: #166534; }          /* Green tone */
+.tag--inprog { background: #fef3c7; color: #92400e; }        /* Amber tone */
+.tag--closed { background: #f3f4f6; color: #374151; }        /* Gray tone */
+
+/* === Forms === */
+/* .field { display: grid; gap: 6px; margin-bottom: 12px; } */
+/*.input, .select, .textarea {
+  width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid #d1d5db; background: white;
+}*/
+.error-text { color: #b91c1c; font-size: 12px; }
+
+/* === Toast === */
+.toast {
+  position: fixed; right: 16px; bottom: 16px; z-index: 50;
+  background: #111827; color: white; padding: 12px 14px; border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* === Footer / Navbar === */
+/*.navbar, .footer {
+  background: white; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;
+}*/
+.navbar__inner, .footer__inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 15px;
+}
+.nav__links { display: flex; gap: 25px; flex-wrap: wrap; }
+a { color: #111827; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ====== Layout: keep footer at the bottom on short pages ====== */
+.layout {
+  min-height: 100vh;              /* full viewport */
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;                         /* push footer down */
+}
+
+/* ====== Navbar: identical spacing as landing, right items aligned in one line ====== */
+.navbar {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+.navbar .container {
+  padding-left: 24px;              /* breathing room from edges */
+  padding-right: 24px;
+}
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 56px;                /* consistent bar height */
+}
+.nav__links {
+  margin-left: auto;               /* push to right */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;               /* keep on one line */
+  white-space: nowrap;
+}
+/* make links and the Logout button align visually */
+.nav__links a,
+.nav__links button.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;                    /* equal height */
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+.nav__links a:hover { text-decoration: none; background: #f3f4f6; }
+.nav__links button.btn:hover { background: #f3f4f6; }
+
+/* ====== Footer (already sticky via .layout/main) ====== */
+.footer {
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  padding: 10px;
+}
+
+/* ====== Auth forms: card look (border, shadow, radius), centered, responsive ====== */
+.auth {
+  padding: 32px 0;
+}
+.auth__wrap {
+  display: grid;
+  place-items: start center;
+}
+.auth-card {
+  width: 100%;
+  max-width: 480px;                /* nice readable width */
+  margin: 16px auto;
+  background: white;
+  border: 1px solid #e5e7eb;       /* border */
+  border-radius: 14px;             /* radius */
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);  /* soft shadow */
+  padding: 20px;
+}
+.auth-card h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+}
+.auth-card p.helper {
+  margin: 0 0 16px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ====== Form controls: align Title + Status heights perfectly ====== */
+.input, .select, .textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: white;
+  font: inherit;
+}
+.input, .select { height: 44px; line-height: 20px; }
+.select { appearance: none; -webkit-appearance: none; -moz-appearance: none; padding-right: 36px; }
+.field { display: grid; gap: 6px; margin-bottom: 12px; }
+.grid .field { align-self: end; }  /* baseline alignment in 2-col grid */
+
+/* ====== Containers keep 1440px rule and consistent inner padding ====== */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+/* Modal */
+.modal__backdrop {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+  display: grid; place-items: center; z-index: 80;
+}
+.modal__panel {
+  width: 100%; max-width: 480px; background: #fff; border: 1px solid #e5e7eb;
+  border-radius: 14px; box-shadow: 0 20px 40px rgba(0,0,0,0.25); padding: 16px;
+}
+.modal__title { margin: 0 0 8px; font-size: 20px; }
+.modal__body { color: #374151; margin-bottom: 12px; }
+.modal__actions { display: flex; gap: 8px; justify-content: flex-end; }
+
+.card--clickable { cursor: pointer; transition: box-shadow .15s ease, transform .06s ease; }
+.card--clickable:hover { box-shadow: 0 14px 30px rgba(0,0,0,0.08); }
+.card--clickable:active { transform: translateY(1px); }
+
+/* Password input with eye (press-and-hold to peek) */
+.input-wrap {
+  position: relative;
+}
+/* inside src/styles.css */
+.peek-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+}
+
+.peek-btn:hover {
+  color: #111827;
+}
+
