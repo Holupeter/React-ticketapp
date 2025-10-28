@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 🎟️ Multi-Framework Ticket Management Web App (React Version)
 
 This repository contains the **React implementation** of the *Multi-Framework Ticket Management Web Application* — a full-featured front-end project designed to test and showcase cross-framework architecture, UI consistency, and component logic across **React**, **Vue**, and **Twig**.
@@ -193,3 +194,6 @@ Vite / CRA build (depending on your setup)
 =======
 # ticketapp-react
 >>>>>>> 2626490ae5ab0b2129206b5feb431d3b22dc74bc
+=======
+# React-ticketapp
+>>>>>>> origin/main
