@@ -1,5 +1,5 @@
 import React from 'react';
-import { BBrowserRouter as  Routes, Route } from 'react-router-dom';
+import { BBrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './styles.css';
 import Navbar from './components/Navbar';
@@ -15,7 +15,7 @@ import Tickets from './pages/Tickets';
 export default function App() {
   return (
     <div className='layout'>
-      <BrowserRouter>
+      <Router>
       <Navbar />
       <main>
         <Routes>
@@ -39,7 +39,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-    </BrowserRouter>
+    </Router>
     </div>
     
   );
