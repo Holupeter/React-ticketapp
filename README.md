@@ -1,8 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# 🎟️ Multi-Framework Ticket Management Web App (React Version)
+
+# Ticket Management Web App (React Version)
 
 This repository contains the **React implementation** of the *Multi-Framework Ticket Management Web Application* — a full-featured front-end project designed to test and showcase cross-framework architecture, UI consistency, and component logic across **React**, **Vue**, and **Twig**.
+
+
+## 🔗 Cross-Framework Links
+
+* [Twig Version README → ](https://github.com/Holupeter/React-ticketapp/blob/main/README.md)
+* [Vue Version README → ](https://github.com/Holupeter/ticketapp-vue/blob/main/README.md)
 
 ---
 
@@ -18,14 +23,6 @@ This application provides a **complete ticket management system** with:
 - A fully **responsive layout** with identical design patterns across all frameworks.
 
 ---
-
-## 🌍 Framework Switchboard
-
-| Framework | Repository | README |
-|------------|-------------|--------|
-| 🟦 **React** | [This repo](#) | [React README (you’re here)](#) |
-| 🟩 **Vue.js** | [Vue README →](https://github.com/Holupeter/ticketapp-vue/blob/main/README.md) 
-| 🟫 **Twig** | [Twig README →](#) 
 
 > Each framework re-implements the same layout, logic, and validation structure using its native architecture.
 
