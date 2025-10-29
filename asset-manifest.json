@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/React-ticketapp/static/css/main.3fd8d4d7.css",
-    "main.js": "/React-ticketapp/static/js/main.5c5502bb.js",
+    "main.js": "/React-ticketapp/static/js/main.e6a99120.js",
     "index.html": "/React-ticketapp/index.html",
     "static/media/wave.svg": "/React-ticketapp/static/media/wave.c372f78d4a83b9e384e76ad551ebc080.svg",
     "main.3fd8d4d7.css.map": "/React-ticketapp/static/css/main.3fd8d4d7.css.map",
-    "main.5c5502bb.js.map": "/React-ticketapp/static/js/main.5c5502bb.js.map"
+    "main.e6a99120.js.map": "/React-ticketapp/static/js/main.e6a99120.js.map"
   },
   "entrypoints": [
     "static/css/main.3fd8d4d7.css",
-    "static/js/main.5c5502bb.js"
+    "static/js/main.e6a99120.js"
   ]
 }
