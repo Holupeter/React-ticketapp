@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Holupeter/React-ticketapp.git/static/css/main.3fd8d4d7.css",
-    "main.js": "/Holupeter/React-ticketapp.git/static/js/main.635f0a78.js",
-    "index.html": "/Holupeter/React-ticketapp.git/index.html",
-    "static/media/wave.svg": "/Holupeter/React-ticketapp.git/static/media/wave.c372f78d4a83b9e384e76ad551ebc080.svg",
-    "main.3fd8d4d7.css.map": "/Holupeter/React-ticketapp.git/static/css/main.3fd8d4d7.css.map",
-    "main.635f0a78.js.map": "/Holupeter/React-ticketapp.git/static/js/main.635f0a78.js.map"
+    "main.css": "/Holupeter/React-ticketapp/static/css/main.3fd8d4d7.css",
+    "main.js": "/Holupeter/React-ticketapp/static/js/main.e9903d10.js",
+    "index.html": "/Holupeter/React-ticketapp/index.html",
+    "static/media/wave.svg": "/Holupeter/React-ticketapp/static/media/wave.c372f78d4a83b9e384e76ad551ebc080.svg",
+    "main.3fd8d4d7.css.map": "/Holupeter/React-ticketapp/static/css/main.3fd8d4d7.css.map",
+    "main.e9903d10.js.map": "/Holupeter/React-ticketapp/static/js/main.e9903d10.js.map"
   },
   "entrypoints": [
     "static/css/main.3fd8d4d7.css",
-    "static/js/main.635f0a78.js"
+    "static/js/main.e9903d10.js"
   ]
 }
