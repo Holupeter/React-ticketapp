@@ -15,7 +15,7 @@ import Tickets from './pages/Tickets';
 export default function App() {
   return (
     <div className='layout'>
-      <BrowserRouter>
+      <HashRouter>
       <Navbar />
       <main>
         <Routes>
@@ -39,7 +39,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
     </div>
     
   );
