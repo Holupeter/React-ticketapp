@@ -6,7 +6,7 @@ This repository contains the **React implementation** of the *Multi-Framework Ti
 
 ## 🔗 Cross-Framework Links
 
-* [Twig Version README → ](https://github.com/Holupeter/React-ticketapp/blob/main/README.md)
+* [Twig Version README → ](https://github.com/Holupeter/ticketapp-twig/blob/main/README.md)
 * [Vue Version README → ](https://github.com/Holupeter/ticketapp-vue/blob/main/README.md)
 
 ---
