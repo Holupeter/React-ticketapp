@@ -24,8 +24,8 @@ This application provides a **complete ticket management system** with:
 | Framework | Repository | README |
 |------------|-------------|--------|
 | 🟦 **React** | [This repo](#) | [React README (you’re here)](#) |
-| 🟩 **Vue.js** | [Vue README →](https://github.com/Holupeter/ticketapp-vue/blob/main/README.md) |
-| 🟫 **Twig** | [Twig README →](#) |
+| 🟩 **Vue.js** | [Vue README →](https://github.com/Holupeter/ticketapp-vue/blob/main/README.md) 
+| 🟫 **Twig** | [Twig README →](#) 
 
 > Each framework re-implements the same layout, logic, and validation structure using its native architecture.
 
